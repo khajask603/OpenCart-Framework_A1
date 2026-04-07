@@ -35,6 +35,9 @@ Project_Root/
 ├── run.bat                        # One-click Suite Execution
 └── install_packages.bat           # One-click Environment Setup
 ```
+
+
+```
 # Environment Setup
 -> To quickly set up the automation environment, run install_packages.bat. It will automatically install the following essential plugins: 
 
@@ -44,3 +47,4 @@ Webdriver-manager: Automatic management of binary drivers for different browsers
 Pytest-html : Tools for generating professional test reports. 
 Openpyxl: Engine used to read and write Excel data for Data-Driven Testing. 
 Pytest-xdist: Plugin for running tests in parallel to save execution time.
+```
