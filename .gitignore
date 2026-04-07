@@ -12,10 +12,3 @@ env/
 
 # IDE Settings (Your personal PyCharm layout)
 .idea/
-
-# Test Reports (keeps your GitHub clean from old runs)
-reports/
-
-# Logs (keeps your history private)
-Logs/*.log
-*.log
