@@ -70,8 +70,6 @@ def pytest_configure(config):
     html_dir.mkdir(parents=True, exist_ok=True)
     screenshot_dir.mkdir(parents=True, exist_ok=True)
 
-
-
     config.option.htmlpath = str(html_dir / "report.html")
     config._report_base_dir = base_dir
 

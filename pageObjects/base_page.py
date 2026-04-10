@@ -11,9 +11,9 @@ class BasePage:
 
     def __init__(self, driver: WebDriver):
         self.driver: WebDriver = driver
-        self.wait=WebDriverWait(self.driver,20)
+        self.wait=WebDriverWait(self.driver,10)
 
-    # --- Regular Click (The Industry Standard) ---
+    # --- Regular Click  ---
     def click_element(self,locator):
         # The '*' here handles the unpacking for the whole framework!
         element=self.wait.until(EC.element_to_be_clickable(locator))
@@ -42,7 +42,7 @@ class BasePage:
         element=self.wait.until(EC.presence_of_element_located(locatore))
         return element.get_attribute("value")
 
-    # --- JS Backup for Value (The "Nerd" version) ---
+    # --- JS Backup for Value  ---
     def js_get_attribute_value(self, locator):
         element = self.wait.until(EC.presence_of_element_located(locator))
         return self.driver.execute_script("return arguments[0].value;", element)
@@ -57,7 +57,7 @@ class BasePage:
         element = self.wait.until(EC.visibility_of_element_located(locator))
         return element.text
 
-    # JS Get Value (Fixes Stale/Hidden text issues)
+    # JS Get Value (Fixes Stale/Hidden text issues)w
     def js_get_text(self, locator):
         element = self.wait.until(EC.presence_of_element_located(locator))
         return self.driver.execute_script("return arguments[0].innerText;", element)
